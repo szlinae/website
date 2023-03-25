@@ -1,6 +1,5 @@
 
-#wrapper, img{
-    width:1920px;
+#logo, img{
+    width:5%;
     height:auto;
-    filter: saturate(3);
 }
