@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>selina</title>
+  <title>selina</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -17,16 +18,158 @@ body, html {
 }
 
 /* Full height image header */
-.bgimg-1 {
-  background-position: center;
-  background-size: cover;
-  background-image: url("watercolorpainting.png");
-  min-height: 100%;
-  filter: saturate(1.3);
+.bgimg {
+  filter: saturate(2);
 }
 
 .w3-bar .w3-button {
   padding: 16px;
+}
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  height: 100%;
+  opacity: 0.75;
+}
+
+.text {
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding-left:100px;
+  padding-right:100px;
+}
+
+.rectangle {
+  height: 300px;
+  width: 600px;
+  background-color: white;
+}
+
+.para {
+  padding-left: 400px;
+  padding-right: 400px;
+  padding-top: 30px;
+}
+
+.ppic {
+  border-radius: 50%;
+}
+
+p.indent {
+  text-indent: 30px;
+}
+
+.cook {
+  position: relative;
+}
+
+.text1 {
+  position: absolute;
+  top: 405px;
+  left: 50px;
+  font-size: 44px;
+}
+
+.text2 {
+  position: absolute;
+  top: 465px;
+  left: 50px;
+  font-size: 28px;
+}
+
+.text3 {
+  position: absolute;
+  top: 525px;
+  left: 50px;
+  font-size: 27px;
+}
+
+.n1 {
+  position: absolute;
+  top: 350px;
+  opacity: 70%;
+}
+
+.cont {
+  position: absolute;
+  top: 575px;
+  left: 50px;
+  /*font-size: 27px;*/
+}
+
+.button-6 {
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 27px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+  opacity: 60%;
+}
+
+.button-6:hover,
+.button-6:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.button-6:hover {
+  transform: translateY(-1px);
+}
+
+.button-6:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
 }
 </style>
 </head>
@@ -42,7 +185,6 @@ body, html {
     <div class="w3-right w3-hide-small">
       <a href="#works" class="w3-bar-item w3-button"></i> SELECTED WORK</a>
       <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-      <a href="#contact" class="w3-bar-item w3-button"></i> CONTACT</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -57,67 +199,115 @@ body, html {
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
   <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">SELECTED WORKS</a>
   <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
 </nav>
 
 <!-- Header with full-height image -->
-<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+<header class="w3-display-container w3-grayscale-min" id="home">
+  <div class="cook">
+    <img class="bgimg" src="watercolorpainting.png" style="width:100%;height:auto;">
+    <div class="rectangle n1"></div>
+    <h2 class="text1">Selina Zhang</h2>
+    <h3 class="text2"> Game Designer and Visual Artist</h3>
+    <h3 class="text3"> 
+        <a href="https://www.linkedin.com/in/szlinae/" target="_blank">
+          <img src="linke.png" style = "width:40px;height:auto">
+        </a>
+        <a href="https://www.artstation.com/nevrland" target="_blank">
+          <img src="arts.png" style = "width:40px;height:auto">
+        </a>
+        <a href="https://toothlesss.itch.io/" target="_blank">
+          <img src="itch.png" style = "width:55px;height:auto">
+        </a>
+      <button class = "button-6" type="button" href="mailto:szlinae@gmail.com">Contact Me</button>
+    </h3>
+  </div>
 </header>
 
 <!-- Selected Works -->
-<div style="padding-top:100px" id="works">
+<div style="padding-top:64px" id="works">
   <h3 class="w3-center">SELECTED WORKS</h3>
   <div style="margin-top:64px">
-    <div>
-      <img src="midterm.png" alt="Frog in Nature" style="width:100%;height:100%;">
+    <div class = "container">
+      <img src="hoppit.png" alt="Hoppit Game Title Image" style="width:100%;height:100%;" class ="image">
+      <div class="overlay">
+        <div class="text">A movement and adventure based game played through the perspective of a frog. 
+          This partner project was completed in Unity with my good friend and classmate KC Tovera.
+          Assets (except lily pads) used do not belong to us.
+          Play it <a href="https://kcvisuals.itch.io/hoppit" target="_blank">here</a>.
+          <p>2023</p>
+        </div>
+      </div>
     </div>
-    <div>
-      <img src="museum.png" alt="2D Collage Project Screenshot" style="width:100%;height:100%;">
+    <div class = "container">
+      <img src="mall.png" alt="Mall Game Screenshot" style="width:100%;height:100%;" class ="image">
+      <div class="overlay">
+        <div class="text">A simulated mall experience created using Unity. Assets used are not mine.
+          Play it <a href="https://toothlesss.itch.io/the-mall" target="_blank">here</a>.
+          <p>2022</p>
+        </div>
+      </div>
     </div>
-    <div>
-      <img src="2dcollage.png" alt="2D Collage Project Screenshot" style="width:100%;height:100%;">
+    <div class = "container">
+      <img src="arachnauts.png" alt="Arachnauts Screenshot" style="width:100%;height:100%;" class ="image">
+      <div class="overlay">
+        <div class="text">A fun and cute puzzle-platformer about escaping the ISS as a spider family.
+          This game was a submission for the 2021 Brackeys Game Jam, created in Unity with my partner. 
+          I created and designed all 2D assets and levels.
+          Play it <a href="https://qwertyuiop888.itch.io/arachnauts" target="_blank">here</a>.
+          <p>2021</p>
+        </div>
+      </div>
     </div>
-    <div>
-      <img src="arachnauts.png" alt="2D Collage Project Screenshot" style="width:100%;height:100%;">
+    <div class = "container">
+      <img src="museum.png" alt="Rare Fish Museum Screenshot" style="width:100%;height:100%;" class ="image">
+      <div class="overlay">
+        <div class="text">A simulated underwater museum experience created using Unity. All assets belong to me (except Shark and Eel model). 
+          Play it <a href="https://toothlesss.itch.io/museum" target="_blank">here</a>.
+          <p>2022</p>
+        </div>
+      </div>
     </div>
-    <div class="w3-center">
-      <img src="ethe.gif" alt="Animated Gif" style="width:60%;height:auto;">
+    <div class = "container">
+        <img src="2dcollage.png" alt="2D Collage Project Screenshot" style="width:100%;height:100%;" class ="image">
+        <div class="overlay">
+          <div class="text">A visual experience about transportation created in Unity and Procreate. 
+            Download it <a href="https://toothlesss.itch.io/2d-collage-core-objects-lab" target="_blank">here</a>.
+            <p>2022</p>
+          </div>
+        </div>
+    </div>
+    <div class = "container">
+      <img src="midterm.png" alt="Frog in Nature" style="width:100%;height:100%;" class ="image">
+      <div class="overlay">
+        <div class="text">A 3D rendered image designed by me for my 3D Assets class. Assets used are not mine.
+          <p>2023</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
 <!-- About Section -->
-<div class="w3-container" style="padding:128px 16px" id="about">
+<div class="w3-container" style="padding:64px 16px" id="about">
   <h3 class="w3-center">ABOUT ME</h3>
-  <div class="w3-row-padding w3-center" style="margin-top:64px">
-    <div class="w3-quarter">
-      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-      <p class="w3-large">hello</p>
+  <div class=" w3-center w3-row-padding" style="margin-top:32px">
+    <div>
+      <img src="headshot.JPG" alt="Profile Headshot" style="width:13%;height:auto;" class ="ppic">
+      <p style="font-size: 18px;" class="indent para">
+        My art journey began in 2007, attending a small art class taught by my mom's friend. 
+        My passion for art has only grown since then, and I've worked with a multitude of mediums and teachers. 
+        Then, in high school, I began to play video games. From then on, I knew what I wanted to do for the 
+        rest of my life. 
+      </p>
+      <p style="font-size: 18px;" class="indent para"> 
+        Currently, I am a sophomore at the Parsons School of Design in New York City. I am obtaining
+        a BFA in Design and Technology in the Game Design pathway. My journey as a game designer has 
+        only just begun. 
+      </p>
     </div>
   </div>
 </div>
 
-<!-- Contact Section -->
-<div class="w3-container w3-light-grey" style="padding-top:100px" id="contact">
-  <h3 class="w3-center">CONTACT</h3>
-  <p class="w3-center w3-large"></p>
-  <div style="margin-top:48px">
-    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: 8324906914</p>
-    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: szlinae@gmail.com</p>
-    <br>
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-border" type="text" placeholder=" Name" required name="Name"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder=" Email" required name="Email"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder=" Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder=" Message" required name="Message"></p>
-      <p>
-        <button class="w3-button w3-black" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </p>
-    </form>
-  </div>
-</div>
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64">
@@ -149,8 +339,10 @@ function w3_open() {
 function w3_close() {
     mySidebar.style.display = "none";
 }
+
+
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
   // Add smooth scrolling to all links
